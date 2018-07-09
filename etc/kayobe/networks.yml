@@ -21,23 +21,24 @@
 #provision_wl_net_name:
 
 # Name of the network used to expose the internal OpenStack API endpoints.
-#internal_net_name:
+internal_net_name: vlan1531_admin_api
 
 # List of names of networks used to provide external network access via
 # Neutron.
 # Deprecated name: external_net_name
 # If external_net_name is defined, external_net_names will default to a list
 # containing one item, external_net_name.
-#external_net_names:
+external_net_names:
+        - vlan1550_provider
 
 # Name of the network used to expose the public OpenStack API endpoints.
-#public_net_name:
+public_net_name: vlan1530_user_api
 
 # Name of the network used to carry storage data traffic.
-#storage_net_name:
+storage_net_name: vlan1532_storage_backend
 
 # Name of the network used to carry storage management traffic.
-#storage_mgmt_net_name:
+storage_mgmt_net_name: vlan1533_storage_frontend
 
 # Name of the network used to perform hardware introspection on the bare metal
 # workload hosts.
@@ -95,42 +96,50 @@
 # provision_wl_net_routes:
 
 # Internal network IP information.
-# internal_net_vip_address:
-# internal_net_fqdn:
-# internal_net_cidr:
-# internal_net_allocation_pool_start:
-# internal_net_allocation_pool_end:
-# internal_net_gateway:
-# internal_net_vlan:
-# internal_net_mtu:
-# internal_net_routes:
+vlan1531_admin_api_vip_address: 172.28.130.10
+vlan1531_admin_api_cidr: 172.28.130.0/24
+vlan1531_admin_api_allocation_pool_start: 172.28.130.100
+vlan1531_admin_api_allocation_pool_end: 172.28.130.150
+#vlan1531_admin_api_gateway:
+#vlan1531_admin_api_mtu:
+#vlan1531_admin_api_routes:
+
+# External network IP information.
+vlan1530_user_api_vip_address: 172.28.129.10
+vlan1530_user_api_cidr: 172.28.129.0/24
+vlan1530_user_api_allocation_pool_start: 172.28.129.100
+vlan1530_user_api_allocation_pool_end: 172.28.129.150
+#vlan1530_user_api_gateway:
+#vlan1530_user_api_mtu:
+#vlan1530_user_api_routes:
 
 # External network IP information.
 # external_net_vip_address:
 # external_net_fqdn:
-# external_net_cidr:
-# external_net_allocation_pool_start:
-# external_net_allocation_pool_end:
-# external_net_neutron_allocation_pool_start:
-# external_net_neutron_allocation_pool_end:
-# external_net_gateway:
-# external_net_vlan:
+vlan1550_provider_cidr: 172.28.136.0/24
+vlan1550_provider_allocation_pool_start: 172.28.136.1
+vlan1550_provider_allocation_pool_end: 172.28.136.250
+vlan1550_provider_neutron_allocation_pool_start: 172.28.136.10
+vlan1550_provider_neutron_allocation_pool_end: 172.28.136.100
+#vlan1550_provider_gateway:
+#vlan1550_provider_vlan:
+
 # external_net_mtu:
 # external_net_routes:
 
 # Storage network IP information.
-# storage_net_cidr:
-# storage_net_allocation_pool_start:
-# storage_net_allocation_pool_end:
-# storage_net_gateway:
-# storage_net_vlan:
-# storage_net_mtu:
-# storage_net_routes:
+vlan1532_storage_backend_cidr: 172.28.132.0/24
+vlan1532_storage_backend_allocation_pool_start: 172.28.132.100
+vlan1532_storage_backend_allocation_pool_end: 172.28.132.150
+#vlan1532_storage_backend_gateway:
+#vlan1532_storage_backend_vlan:
+#vlan1532_storage_backend_mtu:
+#vlan1532_storage_backend_routes:
 
 # Storage management network IP information.
-# storage_mgmt_net_cidr:
-# storage_mgmt_net_allocation_pool_start:
-# storage_mgmt_net_allocation_pool_end:
+vlan1533_storage_frontend_cidr: 172.28.131.0/24
+vlan1533_storage_frontend_allocation_pool_start: 172.28.131.100
+vlan1533_storage_frontend_allocation_pool_end: 172.28.131.150
 # storage_mgmt_net_gateway:
 # storage_mgmt_net_vlan:
 # storage_mgmt_net_mtu:

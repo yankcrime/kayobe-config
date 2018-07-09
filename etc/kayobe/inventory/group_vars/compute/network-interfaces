@@ -3,10 +3,10 @@
 # Network interface definitions for the controller group.
 
 # Overcloud provisioning network IP information.
-provision_oc_net_interface: eth7
-oob_wl_net_interface: eth7
-provision_wl_net_interface: eth7
-inspection_net_interface: eth7
+provision_oc_net_interface: eth3
+oob_wl_net_interface: eth3
+provision_wl_net_interface: eth3
+inspection_net_interface: eth3
 # vlan_1531_admin_interface: eth0
 # provision_oc_net_bridge_ports:
 # provision_oc_net_bond_slaves:

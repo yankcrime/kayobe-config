@@ -1,0 +1,15 @@
+# This file is managed by Ansible. Do not edit.
+
+# Simple inventory for bootstrapping Kolla seed node.
+[seed]
+
+[seed:vars]
+ansible_user=kolla
+# Execute ansible modules on the remote target hosts using a virtualenv.
+ansible_python_interpreter=/opt/kayobe/venvs/kolla-ansible/bin/python
+
+[baremetal:children]
+seed
+
+[bifrost:children]
+seed

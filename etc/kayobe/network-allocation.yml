@@ -1,0 +1,20 @@
+vlan1530_user_api_ips:
+  controller0: 172.28.129.100
+  controller1: 172.28.129.101
+  controller2: 172.28.129.102
+vlan1531_admin_api_ips:
+  controller0: 172.28.130.100
+  controller1: 172.28.130.101
+  controller2: 172.28.130.102
+vlan1532_storage_backend_ips:
+  controller0: 172.28.132.100
+  controller1: 172.28.132.101
+  controller2: 172.28.132.102
+vlan1533_storage_frontend_ips:
+  controller0: 172.28.131.100
+  controller1: 172.28.131.101
+  controller2: 172.28.131.102
+vlan1550_provider_ips:
+  controller0: 172.28.136.1
+  controller1: 172.28.136.2
+  controller2: 172.28.136.3

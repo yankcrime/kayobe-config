@@ -12,13 +12,23 @@ localhost ansible_connection=local
 [seed]
 # Add a seed node here if required. This host will provide the Bifrost
 # undercloud.
+# localhost ansible_connection=local
+# controller0 ansible_host=172.28.128.200 ansible_user=centos
+# controller1 ansible_host=172.28.128.201 ansible_user=centos
+# controller2 ansible_host=172.28.128.202 ansible_user=centos
 
 [controllers]
 # Add controller nodes here if required. These hosts will provide the
 # OpenStack overcloud.
+controller0 ansible_host=172.28.128.200 ansible_user=centos
+controller1 ansible_host=172.28.128.201 ansible_user=centos
+controller2 ansible_host=172.28.128.202 ansible_user=centos
 
 [baremetal-compute]
 # Add baremetal compute nodes here if required.
+#
+[compute]
+compute0 ansible_host=172.28.128.10 ansible_user=centos
 
 [mgmt-switches]
 # Add management network switches here if required.
